@@ -115,6 +115,8 @@ function App() {
     tl.fromTo('.contact h2', { x: '2250%' }, { x: '0%', ease: 'power3.out' })
   }, [isLoading]);
 
+  const [working, setWorking] = useState(true)
+
   return (
     <div className="App">
       {isLoading ? (
@@ -151,7 +153,7 @@ function App() {
           <div
             className="main"
           >
-            <Tech />
+            {working ? (<div className="working">Working on it</div>) : null}
             <h1 className="title hi">
               Hi,
             </h1>

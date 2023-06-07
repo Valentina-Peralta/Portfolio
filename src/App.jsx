@@ -1,5 +1,5 @@
 import Nav from "./components/Nav";
-import backgroundVideo from './assets/images/background.mp4'
+import backgroundVideo from './assets/images/background2.mp4'
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Contact from "./components/Contact";
 import Marquee from "./components/Marquee";
 import Tech from "./components/Tech";
+import Sphere from "./components/Sphere";
 
 
 function App() {
@@ -115,7 +116,7 @@ function App() {
     tl.fromTo('.contact h2', { x: '2250%' }, { x: '0%', ease: 'power3.out' })
   }, [isLoading]);
 
-  const [working, setWorking] = useState(true)
+  const [working, setWorking] = useState(false)
 
   return (
     <div className="App">
@@ -130,6 +131,26 @@ function App() {
         :
         (<>
           <Nav />
+          <div className="sphere1">
+            <Sphere
+              color='#8c97f5'
+              radius='3'
+              lightX='0'
+              lightY='10'
+              lightZ='10'
+              lightIntensity='1'
+              littleSphere
+            />
+          </div>
+          <div className="sphere2">
+            <Sphere
+              color='#FFFFFF'
+              radius='2'
+              lightX='-10'
+              lightY='-10'
+              lightZ='0'
+              lightIntensity='0.1' />
+          </div>
 
           <video
             ref={videoRef}
@@ -168,7 +189,7 @@ function App() {
             <h2 className="icreate">I create solutions</h2>
             <p className="developing">developing successful digital experiences that exceed expectations</p>
           </div>
-          <div className="skills">            <Marquee />
+          <div className="skills">
           </div>
           <div className="contact">
             <h2>Get in touch</h2>

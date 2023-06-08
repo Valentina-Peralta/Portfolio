@@ -78,8 +78,8 @@ const Sphere = ({ littleSphere, color, radius, lightX, lightY, lightZ, lightInte
 
         // Resize
         const handleResize = () => {
-            sizes.width = window.innerWidth
-            sizes.height = window.innerHeight
+            sizes.width =
+                sizes.height = 400
 
             camera.aspect = sizes.width / sizes.height
             camera.updateProjectionMatrix()
@@ -138,7 +138,10 @@ const Sphere = ({ littleSphere, color, radius, lightX, lightY, lightZ, lightInte
         }
     }, [])
 
-    return <canvas ref={canvasRef} className="webgl" />
+    return <canvas ref={canvasRef} className="webgl" >
+
+        <h1>Hola</h1>
+    </canvas>
 }
 
 export default Sphere

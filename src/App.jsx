@@ -191,6 +191,7 @@ function App() {
             <p className="developing">developing successful digital experiences that exceed expectations</p>
           </div>
           <div className="skills">
+
           </div>
           <div className="contact">
             <h2>Get in touch</h2>

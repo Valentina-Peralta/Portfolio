@@ -19,11 +19,16 @@ function Contact() {
 
     return (
         <form className='contact-form' ref={form} onSubmit={sendEmail}>
-            <div className="name-email">   <label>Name</label>
-                <input className='name' type="text" name="from_name" />
-
-                <label>Email</label>
-                <input className='email' type="email" name="reply_to" /></div>
+            <div className="name-email">
+                <div className="name">
+                    <label>Name</label>
+                    <input type="text" name="from_name" />
+                </div>
+                <div className="email">
+                    <label>Email</label>
+                    <input type="email" name="reply_to" />
+                </div>
+            </div>
             <div className="message">
                 <label>Message</label>
                 <textarea name="message" /></div>

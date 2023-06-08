@@ -90,7 +90,7 @@ function App() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.icreate',
-        //start: 'top 80%',
+        start: 'top 80%',
         //end: 'bottom -10%',
         scrub: true,
         repeat: -1
@@ -152,29 +152,30 @@ function App() {
               lightIntensity='0.1' />
           </div>
 
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              opacity: .8
-            }}
-          >
-            <source src={backgroundVideo} type="video/mp4" />
-            Tu navegador no soporta el elemento de video.
-          </video>
+
 
           <div
             className="main"
           >
             {working ? (<div className="working">Working on it</div>) : null}
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                opacity: .8,
+              }}
+            >
+              <source src={backgroundVideo} type="video/mp4" />
+              Tu navegador no soporta el elemento de video.
+            </video>
             <h1 className="title hi">
               Hi,
             </h1>

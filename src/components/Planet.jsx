@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { gsap } from 'gsap'
 
-const Sphere = ({ littleSphere, color, radius, lightX, lightY, lightZ, lightIntensity }) => {
+const Planet = ({ littleSphere, color, radius, lightX, lightY, lightZ, lightIntensity }) => {
     const canvasRef = useRef(null)
 
     useEffect(() => {
@@ -144,4 +144,4 @@ const Sphere = ({ littleSphere, color, radius, lightX, lightY, lightZ, lightInte
     </canvas>
 }
 
-export default Sphere
+export default Planet

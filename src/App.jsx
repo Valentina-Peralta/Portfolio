@@ -7,10 +7,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Contact from "./components/Contact";
 import Marquee from "./components/Marquee";
 import Tech from "./components/Tech";
-import Sphere from "./components/Sphere";
-
+import Planet from "./components/Planet";
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import React from 'react'
+import { SphereGeometry } from "three";
 
 function App() {
+
+
   const videoRef = useRef(null);
   const videoElement = videoRef.current;
   console.log(videoElement)
@@ -131,8 +136,43 @@ function App() {
         :
         (<>
           <Nav />
-          <div className="sphere1">
-            <Sphere
+          <Canvas
+            className="distortSphere"
+            style={{
+              position: 'absolute',
+              left: '0%',
+              width: '100%',
+              height: '100vh',
+              zIndex: 1,
+              backgroundColor: 'transparent',
+            }}
+          >
+            <OrbitControls
+              enableZoom={false}
+              autoRotate={true}
+              rotateSpeed={4}
+            />
+            <ambientLight
+              intensity={.8}
+              color='#5FC5C0'
+
+            />
+            <directionalLight
+              position={[4, 1, 20]}
+
+            />
+            <Sphere args={[1, 100, 100]} scale={2} >
+              <MeshDistortMaterial
+                roughness={20}
+                color='#37042b'
+                attach='material'
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
+          {/* <div className="sphere1">
+            <Planet
               color='#8c97f5'
               radius='3'
               lightX='0'
@@ -143,7 +183,7 @@ function App() {
             />
           </div>
           <div className="sphere2">
-            <Sphere
+            <Planet
               color='#FFFFFF'
               radius='2'
               lightX='-10'
@@ -151,12 +191,10 @@ function App() {
               lightZ='0'
               lightIntensity='0.1' />
           </div>
+ */}
 
 
-
-          <div
-            className="main"
-          >
+          <div className="main" >
             {working ? (<div className="working">Working on it</div>) : null}
             <video
               ref={videoRef}
@@ -167,7 +205,8 @@ function App() {
                 position: 'fixed',
                 top: 0,
                 left: 0,
-                width: '100%',
+                width: '100vw',
+                maxWidth: '1400px',
                 height: '100%',
                 objectFit: 'cover',
                 opacity: .8,
@@ -176,14 +215,24 @@ function App() {
               <source src={backgroundVideo} type="video/mp4" />
               Tu navegador no soporta el elemento de video.
             </video>
-            <h1 className="title hi">
+
+            <h1
+              style={{
+                zIndex: 50
+              }}
+              className="title hi">
               Hi,
             </h1>
 
-            <h1 className="title im">
+            <h1
+
+              className="title im">
               I'm Valentina
             </h1>
+
             <p className="description">Creative web developer and mathematics enthusiast</p>
+
+
           </div>
 
           <div className="about">
@@ -191,7 +240,6 @@ function App() {
             <p className="developing">developing successful digital experiences that exceed expectations</p>
           </div>
           <div className="skills">
-
           </div>
           <div className="contact">
             <h2>Get in touch</h2>

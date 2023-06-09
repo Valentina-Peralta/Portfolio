@@ -5,13 +5,9 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Contact from "./components/Contact";
-import Marquee from "./components/Marquee";
-import Tech from "./components/Tech";
-import Planet from "./components/Planet";
 import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
-import { SphereGeometry } from "three";
 
 function App() {
 
@@ -96,13 +92,13 @@ function App() {
       scrollTrigger: {
         trigger: '.icreate',
         start: 'top 80%',
-        //end: 'bottom -10%',
+        //end: 'bottom 10%',
         scrub: true,
-        repeat: -1
+        repeat: 1
       }
     });
 
-    tl.fromTo('.icreate', { x: '150%' }, { x: '0%', ease: 'power3.out' },)
+    tl.fromTo('.icreate', { scale: '0', opacity: '0' }, { scale: '1', opacity: '1', ease: 'power3.out' },)
   }, [isLoading]);
 
   useEffect(() => {

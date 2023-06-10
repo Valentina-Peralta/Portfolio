@@ -18,7 +18,7 @@ function Tech() {
         >
             <Canvas>
                 <OrbitControls
-                    enableZoom={false}
+                    enableZoom={true}
                     autoRotate={true}
                 />
                 <ambientLight

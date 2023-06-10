@@ -4,11 +4,15 @@ function Nav() {
     return (
         <nav>
             <ul>
-                <li>about</li>
+                <a href='#about'>
+                    <li>about</li>
+                </a>
                 <li>
                     projects
                 </li>
-                <li>contact</li>
+                <a href='#contact'>
+                    <li>contact</li>
+                </a>
             </ul>
 
         </nav>)

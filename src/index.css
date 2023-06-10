@@ -9,6 +9,10 @@
 }
 
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .working {
   position: fixed;
@@ -30,6 +34,11 @@
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+
+}
+
 .App {
   background-color: #000;
   color: #f5f5f7;
@@ -37,6 +46,7 @@
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+
 
 }
 
@@ -79,6 +89,7 @@
   font-size: 3rem;
   position: absolute;
 }
+
 
 nav {
   display: flex;
@@ -184,7 +195,7 @@ nav ul li {
 }
 
 
-/* .im:hover {
+.pulse:hover {
   animation: pulse 1s ease;
 }
 
@@ -201,7 +212,7 @@ nav ul li {
     transform: scale(1);
   }
 }
- */
+
 
 .about h2 {
   position: relative;
@@ -209,8 +220,7 @@ nav ul li {
   left: 10%;
   font-size: 5rem;
   text-shadow: 0px 0px 5px #000000;
-  z-index: 10;
-
+  z-index: 2;
 
 
 }
@@ -264,7 +274,7 @@ nav ul li {
 .contact h2 {
   position: relative;
   top: 10;
-  left: 8%;
+  left: 6%;
   font-size: 5rem;
   text-shadow: 0px 0px 5px #000000;
 
@@ -318,6 +328,7 @@ label {}
   background-color: transparent;
   border: 2px solid #f5f5f7;
   color: #f5f5f7;
+  padding: 10px;
 }
 
 .send {
@@ -382,6 +393,7 @@ label {}
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 6rem;
   }
 
   .contact h2 {

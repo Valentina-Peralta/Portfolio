@@ -11,7 +11,7 @@ function Cube() {
     return (
         <mesh>
             <boxGeometry
-                args={[2, 2, 2]}
+                args={[.01, 2, 2]}
             />
             <meshStandardMaterial
             >

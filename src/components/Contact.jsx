@@ -1,7 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+
 
 function Contact() {
+    const [sent, setSent] = useState(false)
 
     const form = useRef();
 
@@ -12,6 +16,9 @@ function Contact() {
             .then((result) => {
                 console.log(result.text);
                 console.log('message sent')
+                setSent(true)
+                form.current.reset(); // Resetea los campos del formulario
+
             }, (error) => {
                 console.log(error.text);
             });
@@ -33,6 +40,8 @@ function Contact() {
                 <label>Message</label>
                 <textarea name="message" /></div>
             <input className='send' type="submit" value="Send" />
+
+
         </form>
     );
 

@@ -9,40 +9,41 @@ import express from '../assets/images/express.png'
 import postgresql from '../assets/images/postgresql.png'
 function TechMarquee() {
     return (
+        <div className="marquee-wrapper">
+            <Marquee
+                pauseOnHover
+                speed={60}
+            >
+                <div className="image-wrapper">
+                    <img src={html} alt="" />
+                </div>
+                <div className="image-wrapper">
+                    <img src={css} alt="" />
 
-        <Marquee
-            pauseOnHover
-            speed={10}
-        >
-            <div className="image-wrapper">
-                <img src={html} alt="" />
-            </div>
-            <div className="image-wrapper">
-                <img src={css} alt="" />
+                </div>
+                <div className="image-wrapper">
+                    <img src={js} alt="" />
 
-            </div>
-            <div className="image-wrapper">
-                <img src={js} alt="" />
+                </div>
+                <div className="image-wrapper">
+                    <img src={react} alt="" />
 
-            </div>
-            <div className="image-wrapper">
-                <img src={react} alt="" />
+                </div>
+                <div className="image-wrapper">
+                    <img src={node} alt="" />
 
-            </div>
-            <div className="image-wrapper">
-                <img src={node} alt="" />
+                </div>
+                <div className="image-wrapper">
+                    <img src={express} alt="" />
 
-            </div>
-            <div className="image-wrapper">
-                <img src={express} alt="" />
+                </div>
+                <div className="image-wrapper">
+                    <img src={postgresql} alt="" />
 
-            </div>
-            <div className="image-wrapper">
-                <img src={postgresql} alt="" />
+                </div>
 
-            </div>
-
-        </Marquee>
+            </Marquee>
+        </div>
 
     )
 }

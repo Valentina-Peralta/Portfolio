@@ -117,12 +117,12 @@ function App() {
         start: 'top 35%',
         end: 'bottom 35%',
         scrub: true,
-        repeat: 1
+        repeat: 1,
       },
       defaults: { duration: 2 }
     });
 
-    tl2.to('.distortSphere', { y: '10%', x: '-40%', ease: 'power3.out' }, '-=1')
+    tl2.to('.distortSphere', { y: '10%', x: '-40%', ease: 'power3.out' })
 
 
   }, [isLoading]);

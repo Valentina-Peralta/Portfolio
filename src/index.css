@@ -169,13 +169,15 @@ nav ul li {
 
 }
 
-.text-container {
-  position: relative;
-  z-index: 50;
-  color: transparent;
-  text-shadow: 0 0 1px #f5f5f7;
-  filter: drop-shadow(0 0 1px #f5f5f7);
+.image-wrapper {
+  width: 50%;
+  margin: 0 50px;
 }
+
+.image-wrapper img {
+  width: 80%;
+}
+
 
 .social {
   position: relative;

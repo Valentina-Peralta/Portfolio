@@ -8,6 +8,9 @@ import Contact from "./components/Contact";
 import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
+import DistortedSphere from "./components/DistortedSphere";
+import Marquee from "./components/TechMarquee";
+import TechMarquee from "./components/TechMarquee";
 
 
 function App() {
@@ -82,6 +85,7 @@ function App() {
       .to('.things', { opacity: 0, y: '100%', ease: 'power3.inOut', delay: 0.01, duration: 0.3 })
       .fromTo('.work', { x: '1000%' }, { x: '0%', ease: 'bounce.out' })
 
+
       ;
 
 
@@ -92,13 +96,11 @@ function App() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.about',
-        start: 'top 80%',
-        //end: 'bottom 10%',
+        start: 'top 35%',
+        end: 'bottom 35%',
         scrub: true,
         repeat: 1
       },
@@ -106,8 +108,21 @@ function App() {
     });
 
     tl.fromTo('.icreate', { x: '200%', opacity: '0' }, { x: '0', opacity: '1', ease: 'power3.out' },)
-      // .fromTo('.description', { opacity: '1' }, { opacity: '0', ease: 'power3.out' }, '-=1')
       .fromTo('.developing', { x: '-200%' }, { x: '0', ease: 'power3.out' }, '-=1')
+      .fromTo('.distortSphere', { y: '0', x: '0' }, { y: '-10%', x: '40%', ease: 'power3.out' }, '-=1')
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.skills',
+        start: 'top 35%',
+        end: 'bottom 35%',
+        scrub: true,
+        repeat: 1
+      },
+      defaults: { duration: 2 }
+    });
+
+    tl2.to('.distortSphere', { y: '10%', x: '-40%', ease: 'power3.out' }, '-=1')
 
 
   }, [isLoading]);
@@ -146,7 +161,7 @@ function App() {
           <Canvas
             className="distortSphere"
             style={{
-              position: 'absolute',
+              position: 'fixed',
               left: '0%',
               width: '100%',
               height: '100vh',
@@ -166,18 +181,10 @@ function App() {
             />
             <directionalLight
               position={[4, 1, 20]}
-              color='#0008ff              '
 
             />
-            <Sphere args={[1, 100, 100]} scale={2} >
-              <MeshDistortMaterial
-                roughness={20}
-                color='#37042b'
-                attach='material'
-                distort={0.5}
-                speed={2}
-              />
-            </Sphere>
+            <DistortedSphere
+            />
           </Canvas>
           {/* <div className="sphere1">
             <Planet
@@ -249,6 +256,7 @@ function App() {
             <p className="developing">developing successful digital experiences that exceed expectations</p>
           </div>
           <div className="skills">
+            <TechMarquee />
           </div>
           <div className="contact" id="contact">
             <h2>Get in touch</h2>

@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
 
 
 function Contact() {

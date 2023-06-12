@@ -9,7 +9,6 @@ import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import DistortedSphere from "./components/DistortedSphere";
-import Marquee from "./components/TechMarquee";
 import TechMarquee from "./components/TechMarquee";
 
 
@@ -23,7 +22,6 @@ function App() {
   }
   const videoRef = useRef(null);
   const videoElement = videoRef.current;
-  console.log(videoElement)
 
   const [isLoading, setIsLoading] = useState(true)
 
@@ -36,6 +34,9 @@ function App() {
   }, []);
 
   useEffect(() => {
+    /* videoRef.current.playbackRate = 0.5; 
+    videoRef.current.play(); */
+
     const tl = gsap.timeline({
       defaults: { duration: .7 },
     });
@@ -163,7 +164,7 @@ function App() {
             style={{
               position: 'fixed',
               left: '0%',
-              width: '100%',
+              width: '80%',
               height: '100vh',
               zIndex: 1,
               backgroundColor: 'transparent',
@@ -184,6 +185,37 @@ function App() {
 
             />
             <DistortedSphere
+              radius={1}
+            />
+          </Canvas>
+          <Canvas
+            className="distortSphere"
+            id="mobile"
+            style={{
+              position: 'fixed',
+              left: '0%',
+              width: '80%',
+              height: '100vh',
+              zIndex: 1,
+              backgroundColor: 'transparent',
+            }}
+          >
+            <OrbitControls
+              enableZoom={false}
+              autoRotate={true}
+              rotateSpeed={4}
+            />
+            <ambientLight
+              intensity={.8}
+              color='#5FC5C0'
+
+            />
+            <directionalLight
+              position={[4, 1, 20]}
+
+            />
+            <DistortedSphere
+              radius={0.6}
             />
           </Canvas>
           {/* <div className="sphere1">

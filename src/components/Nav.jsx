@@ -3,6 +3,7 @@ import React from 'react'
 function Nav() {
     return (
         <nav>
+
             <ul>
                 <a href='#about'>
                     <li>about</li>

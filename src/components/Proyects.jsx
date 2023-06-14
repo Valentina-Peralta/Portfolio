@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../Stylesheets/Proyects.css'
-import space from '../assets/images/Space.jpeg'
+import space from '../assets/images/space.jpeg'
 import todo from '../assets/images/todo.jpeg'
 import audn from '../assets/images/audn.jpeg'
 function Proyects() {

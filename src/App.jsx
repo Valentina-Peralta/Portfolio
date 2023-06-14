@@ -1,5 +1,5 @@
 import Nav from "./components/Nav";
-import backgroundVideo from './assets/images/background2.mp4'
+import backgroundVideo from './assets/images/background4.mp4'
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -10,7 +10,7 @@ import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import DistortedSphere from "./components/DistortedSphere";
 import TechMarquee from "./components/TechMarquee";
-
+import Proyects from "./components/Proyects";
 
 function App() {
 
@@ -164,7 +164,7 @@ function App() {
             style={{
               position: 'fixed',
               left: '0%',
-              width: '80%',
+              width: '100%',
               height: '100vh',
               zIndex: 1,
               backgroundColor: 'transparent',
@@ -177,7 +177,7 @@ function App() {
             />
             <ambientLight
               intensity={.8}
-              color='#5FC5C0'
+              color='#ffffff'
 
             />
             <directionalLight
@@ -186,36 +186,6 @@ function App() {
             />
             <DistortedSphere
               radius={1}
-            />
-          </Canvas>
-          <Canvas
-            className="distortSphere"
-            id="mobile"
-            style={{
-              position: 'fixed',
-              left: '0%',
-              width: '80%',
-              height: '100vh',
-              zIndex: 1,
-              backgroundColor: 'transparent',
-            }}
-          >
-            <OrbitControls
-              enableZoom={false}
-              autoRotate={true}
-              rotateSpeed={4}
-            />
-            <ambientLight
-              intensity={.8}
-              color='#5FC5C0'
-
-            />
-            <directionalLight
-              position={[4, 1, 20]}
-
-            />
-            <DistortedSphere
-              radius={0.6}
             />
           </Canvas>
           {/* <div className="sphere1">
@@ -253,10 +223,9 @@ function App() {
                 top: 0,
                 left: 0,
                 width: '100vw',
-                maxWidth: '1400px',
                 height: '100%',
                 objectFit: 'cover',
-                opacity: .8,
+                opacity: .6,
               }}
             >
               <source src={backgroundVideo} type="video/mp4" />
@@ -290,9 +259,10 @@ function App() {
           <div className="skills">
             <TechMarquee />
           </div>
+          <Proyects />
+
           <div className="contact" id="contact">
             <h2>Get in touch</h2>
-
             <Contact />
             <div className="social">
               <a className='pulse' href="https://www.linkedin.com/in/valentinaperaltavila/" target="_blank">

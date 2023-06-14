@@ -75,6 +75,10 @@ html {
   position: relative;
 }
 
+.skills {
+  height: 20vh;
+}
+
 
 
 
@@ -134,6 +138,8 @@ nav ul li {
 
 
 /*MAIN SECTION*/
+.main {}
+
 .main p {
   position: absolute;
   bottom: 0;
@@ -186,6 +192,7 @@ nav ul li {
   z-index: 10;
 }
 
+
 /*CONTACT SECTION*/
 .contact {
   background-color: transparent;
@@ -212,8 +219,8 @@ nav ul li {
 
 .contact h2 {
   position: relative;
-  top: 10;
-  left: 6%;
+  top: 10%;
+  left: 10%;
   font-size: 5rem;
   text-shadow: 0px 0px 5px #000000;
 }
@@ -335,17 +342,28 @@ input {
 
 
 
+@media only screen and (max-width:800px) {
+  .main p {
+    bottom: 0;
+    left: 10%;
+    font-size: 2rem;
+    text-align: start;
+  }
+
+}
 
 
 
 
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:550px) {
 
 
   nav {
     width: 100vw;
   }
+
+
 
   video {
     object-fit: contain;
@@ -361,12 +379,14 @@ input {
     font-size: 4rem;
   }
 
+
+
   .main p {
     bottom: 0;
     left: 10%;
     font-size: 2rem;
     text-align: start;
-    width: 80%;
+    width: 100%;
   }
 
   .about h2 {
@@ -380,6 +400,7 @@ input {
     left: 2rem;
     text-align: start;
   }
+
 
   .contact {
     display: flex;

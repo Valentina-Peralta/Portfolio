@@ -10,7 +10,7 @@ function Proyects() {
     useEffect(() => console.log(proyect), [proyect])
 
     return (
-        <div className="proyects">
+        <div className="proyects" id='proyects'>
             <h2>Projects</h2>
             <div className="proyect-wrapper">
                 <h3

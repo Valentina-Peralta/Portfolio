@@ -68,15 +68,15 @@ html {
 
 .main,
 .about,
-.contact,
-.skills {
+.contact {
   width: 100%;
   height: 65vh;
   position: relative;
 }
 
 .skills {
-  height: 20vh;
+  width: 100%;
+  position: relative;
 }
 
 

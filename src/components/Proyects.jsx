@@ -7,7 +7,7 @@ function Proyects() {
 
     const [proyect, setProyect] = useState('')
     const [hover, setHover] = useState(false)
-    useEffect(() => console.log(proyect), [proyect])
+    useEffect(() => console.log(proyect, hover), [proyect, hover])
 
     return (
         <div
@@ -44,6 +44,7 @@ function Proyects() {
 
             </div>
             <div
+                onClick={() => setHover(true)}
                 onMouseOver={() => setHover(true)}
                 className="proyect-img">
                 {proyect === 'space' ? <img src={space} alt='space tourism' /> : proyect === 'todo' ? <img src={todo} alt='todo' /> : proyect === 'audn' ? <img src={audn} alt='audn' /> : null}

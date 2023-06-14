@@ -15,7 +15,7 @@
 .proyects h2 {
     position: absolute;
     z-index: 20;
-    top: 5%;
+    top: 15%;
     font-size: 5rem;
     left: 10%;
     text-shadow: 0px 0px 5px #000000;
@@ -50,7 +50,10 @@
 
 }
 
-
+.blur {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
 
 .proyect-img img {
     position: absolute;
@@ -72,14 +75,15 @@
 
 
 .icons {
-    display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
     padding: 20px;
 }
 
 .icons svg {
     width: 37px;
+    cursor: pointer;
 }
 
 #active {

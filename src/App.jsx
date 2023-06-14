@@ -133,9 +133,9 @@ function App() {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.skills',
-        //        start: 'top 80%',
-        //      end: 'bottom 0%',
+        trigger: '.proyects',
+        start: 'top 35%',
+        end: 'bottom 35%',
         scrub: true,
         // repeat: -1
       },

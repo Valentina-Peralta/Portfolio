@@ -6,24 +6,49 @@ import audn from '../assets/images/audn.jpeg'
 function Proyects() {
 
     const [proyect, setProyect] = useState('')
-
+    const [hover, setHover] = useState(false)
     useEffect(() => console.log(proyect), [proyect])
 
     return (
-        <div className="proyects" id='proyects'>
+        <div
+            className="proyects" id='proyects'
+            onClick={() => {
+                setHover(false)
+            }}
+        >
             <h2>Projects</h2>
             <div className="proyect-wrapper">
                 <h3
-                    id={proyect === 'space' ? 'active' : null} onMouseEnter={() => setProyect('space')}
+                    id={proyect === 'space' ? 'active' : null}
+                    onMouseEnter={() => {
+                        setProyect('space')
+                        setHover(false)
+                    }}
+
                 >Space tourism</h3>
                 <h3
                     id={proyect === 'todo' ? 'active' : null}
-                    onMouseEnter={() => setProyect('todo')}
+                    onMouseEnter={() => {
+                        setProyect('todo')
+                        setHover(false)
+                    }}
 
                 >Todo list</h3>
                 <h3
-                    id={proyect === 'audn' ? 'active' : null} onMouseEnter={() => setProyect('audn')}
+                    id={proyect === 'audn' ? 'active' : null}
+                    onMouseEnter={() => {
+                        setProyect('audn')
+                        setHover(false)
+                    }}
                 >Audn</h3>
+
+            </div>
+            <div
+                onMouseOver={() => setHover(true)}
+                className="proyect-img">
+                {proyect === 'space' ? <img src={space} alt='space tourism' /> : proyect === 'todo' ? <img src={todo} alt='todo' /> : proyect === 'audn' ? <img src={audn} alt='audn' /> : null}
+            </div>
+            {hover ? <div className="proyect-img blur">
                 <div className="icons">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="64px" height="64px" fillOpacity="1" fill="#FFFFFF" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{ mixBlendMode: 'normal' }}>
                         <g transform="scale(4,4)">
@@ -34,9 +59,7 @@ function Proyects() {
 
                 </div>
             </div>
-            <div className="proyect-img">
-                {proyect === 'space' ? <img src={space} alt='space tourism' /> : proyect === 'todo' ? <img src={todo} alt='todo' /> : proyect === 'audn' ? <img src={audn} alt='audn' /> : null}
-            </div>
+                : null}
         </div>
 
     )

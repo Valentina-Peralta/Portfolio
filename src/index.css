@@ -10,6 +10,10 @@
   display: none;
 }
 
+.background-img {
+  display: none;
+}
+
 .stroke {
   color: transparent;
   -webkit-text-stroke: 1px #f5f5f7;
@@ -144,7 +148,9 @@ nav ul li {
 
 
 /*MAIN SECTION*/
-.main {}
+.main {
+  min-height: 500px;
+}
 
 .main p {
   position: absolute;
@@ -178,9 +184,14 @@ nav ul li {
 }
 
 /*ABOUT SECTION*/
+.about {
+  height: 80vh;
+  min-height: 1600px;
+}
+
 .about h2 {
   position: relative;
-  top: 10%;
+  top: 15%;
   left: 10%;
   font-size: 5rem;
   text-shadow: 0px 0px 5px #000000;
@@ -188,14 +199,59 @@ nav ul li {
 }
 
 .about p {
+  font-size: 2.5rem;
+  text-align: end;
+  text-shadow: 0px 0px 5px #000000;
+  z-index: 10;
+  line-height: 4rem;
+}
+
+.developing {
   position: relative;
-  top: 30%;
+  top: 20%;
   left: 10%;
   width: 80%;
   font-size: 3rem;
   text-align: end;
   text-shadow: 0px 0px 5px #000000;
   z-index: 10;
+}
+
+.about :nth-child(3) {
+  position: relative;
+  top: 22%;
+  left: 10%;
+  width: 70%;
+  padding: 0 1rem;
+  border-right: 1px solid white;
+
+}
+
+.about :nth-child(4) {
+  position: relative;
+  top: 25%;
+  width: 70%;
+  right: 10%;
+  text-align: justify;
+  padding: 0 1rem;
+  border-left: 1px solid white;
+
+}
+
+.about :nth-child(5) {
+  position: relative;
+  top: 30%;
+  width: 70%;
+  padding: 0 1rem;
+  border-right: 1px solid white;
+}
+
+.about :nth-child(6) {
+  position: relative;
+  top: 32%;
+  font-size: 3rem;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 
@@ -205,6 +261,7 @@ nav ul li {
   backdrop-filter: blur(5px);
   z-index: 10;
   position: relative;
+  min-height: 600px;
 
 }
 
@@ -348,7 +405,7 @@ input {
 
 
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:1200px) {
   .main p {
     bottom: 0;
     left: 10%;
@@ -356,27 +413,52 @@ input {
     text-align: start;
   }
 
+  .about {
+    height: 130vw;
+    min-height: 1640px;
+  }
+
+  .about p {
+    font-size: 2rem;
+  }
+
+}
+
+@media only screen and (max-width:900px) {
+  .about {
+    min-height: 2400px;
+  }
 }
 
 
 
 
-
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:600px) {
 
 
   nav {
-    width: 100vw;
+    display: none;
   }
 
-
-
-  video {
+  .main {
+    height: 100vh;
     object-fit: contain;
   }
 
+  .background-img {
+    display: block;
+    position: fixed;
+    opacity: 0.6;
+    height: 100vh;
+
+  }
+
+  video {
+    display: none;
+  }
+
   .im {
-    top: 25vh;
+    top: 30vh;
   }
 
   .hi,
@@ -388,23 +470,64 @@ input {
 
 
   .main p {
-    bottom: 0;
-    left: 10%;
+    text-align: center;
+    bottom: 10vh;
+    left: 0;
     font-size: 2rem;
-    text-align: start;
+    text-align: center;
     width: 100%;
+    padding: 0 2rem;
   }
 
   .about h2 {
+    top: 35vh;
     font-size: 4rem;
     width: 85%;
   }
 
   .about p {
-    font-size: 2rem;
-    width: 80%;
-    left: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    left: 0;
+    top: 50vh;
+    padding: 0 2rem;
     text-align: start;
+    position: relative;
+  }
+
+
+
+  .about :nth-child(3) {
+    width: 100%;
+    top: 65vh;
+    border-right: 1px solid white;
+    right: 0;
+
+
+  }
+
+  .about :nth-child(4) {
+    top: 70vh;
+    width: 100%;
+    left: -50%;
+    text-align: justify;
+    padding: 0 2rem;
+    border-left: 1px solid white;
+
+  }
+
+  .about :nth-child(5) {
+    top: 75vh;
+    width: 100%;
+    padding: 0 2rem;
+    border-right: 1px solid white;
+  }
+
+  .about :nth-child(6) {
+    font-size: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
   }
 
 

@@ -44,12 +44,12 @@ function Proyects() {
 
             </div>
             <div
-                onClick={() => setHover(true)}
+                onMouseEnter={() => setHover(true)}
                 onMouseOver={() => setHover(true)}
                 className="proyect-img">
                 {proyect === 'space' ? <img src={space} alt='space tourism' /> : proyect === 'todo' ? <img src={todo} alt='todo' /> : proyect === 'audn' ? <img src={audn} alt='audn' /> : null}
             </div>
-            {hover ? <div className="proyect-img blur">
+            {hover && proyect !== '' ? <div className="proyect-img blur">
                 <div className="icons">
                     <a href={proyect === 'space' ? 'https://github.com/Valentina-Peralta/Space-tourism.git' : proyect === 'todo' ? 'https://github.com/Valentina-Peralta/Todo-list.git' : proyect === 'audn' ? 'https://github.com/Valentina-Peralta/proyecto-final-senpai.git' : null} target='_blank'>
                         <svg

@@ -49,6 +49,7 @@
     justify-content: center;
     border-radius: 20px;
 
+
 }
 
 .blur {
@@ -64,6 +65,8 @@
     object-fit: cover;
     overflow: hidden;
     border-radius: 20px;
+    filter: grayscale(1);
+
 
 }
 

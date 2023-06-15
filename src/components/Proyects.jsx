@@ -5,7 +5,7 @@ import todo from '../assets/images/todo.jpeg'
 import audn from '../assets/images/audn.jpeg'
 function Proyects() {
 
-    const [proyect, setProyect] = useState('')
+    const [proyect, setProyect] = useState('space')
     const [hover, setHover] = useState(false)
     useEffect(() => console.log(proyect, hover), [proyect, hover])
 

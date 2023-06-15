@@ -17,10 +17,9 @@ function App() {
 
   function download() {
     const link = document.createElement('a');
-    link.href = 'CV.pdf';
+    link.href = 'Valentina Peralta CV.pdf';
     link.download = 'ValentinaPeraltaCV.pdf';
     link.click();
-    console.log(link, document)
   }
   const videoRef = useRef(null);
   const videoElement = videoRef.current;

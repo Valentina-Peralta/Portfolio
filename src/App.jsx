@@ -224,6 +224,7 @@ function App() {
           <div className="main" >
             {working ? (<div className="working">Working on it</div>) : null}
             <video
+              className="background-video"
               ref={videoRef}
               autoPlay
               loop

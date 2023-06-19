@@ -454,7 +454,7 @@ input {
 
   }
 
-  video {
+  .background-video {
     display: none;
   }
 

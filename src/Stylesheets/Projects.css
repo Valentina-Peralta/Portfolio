@@ -19,7 +19,7 @@
     backdrop-filter: blur(20px);
 
     z-index: 950;
-    position: relative;
+    position: absolute;
 }
 
 .demo-wrapper svg {

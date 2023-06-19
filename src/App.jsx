@@ -11,7 +11,7 @@ import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import DistortedSphere from "./components/DistortedSphere";
 import TechMarquee from "./components/TechMarquee";
-import Proyects from "./components/Proyects";
+import Proyects from "./components/Projects";
 
 function App() {
 
@@ -140,7 +140,7 @@ function App() {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.proyects',
+        trigger: '.projects',
         start: 'top 35%',
         end: 'bottom 35%',
         scrub: true,

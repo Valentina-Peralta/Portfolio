@@ -8,7 +8,7 @@ function Nav() {
                 <a href='#about'>
                     <li>about</li>
                 </a>
-                <a href="#proyects">
+                <a href="#projects">
                     <li>
                         projects
                     </li>

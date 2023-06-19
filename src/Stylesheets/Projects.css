@@ -24,11 +24,14 @@
 
 .demo-wrapper svg {
     position: relative;
-    top: 5rem;
-    right: -1rem;
-    width: 40px;
+    top: 1rem;
+    right: 0rem;
+    width: 60px;
+    padding: 10px;
     z-index: 1000;
     cursor: pointer;
+    filter: drop-shadow(5px 5px 10px rgba(8, 8, 17, 0.91)) drop-shadow(2px 2px 4px rgba(19, 19, 224, 0.449));
+
 }
 
 .react-player {

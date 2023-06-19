@@ -264,7 +264,7 @@ function App() {
           <div className="about" id="about" >
 
             <h2 className="icreate">I create solutions</h2>
-            <p className="developing">developing successful digital experiences that exceed expectations</p>
+            <p className="developing">developing successful digital experiences that exceed expectations.</p>
             <p className="intrigued">
               I've always been intrigued by unraveling how things work and finding the best solutions to problems.
             </p>

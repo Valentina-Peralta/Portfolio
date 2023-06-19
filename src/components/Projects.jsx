@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../Stylesheets/projects.css'
+import '../Stylesheets/Projects.css'
 import space from '../assets/images/space.jpeg'
 import todo from '../assets/images/todo.jpeg'
 import audn from '../assets/images/audn.jpeg'

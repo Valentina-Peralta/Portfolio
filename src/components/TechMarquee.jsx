@@ -7,6 +7,7 @@ import react from '../assets/images/react.png'
 import node from '../assets/images/node.png'
 import express from '../assets/images/express.png'
 import postgresql from '../assets/images/postgresql.png'
+import next from '../assets/images/next.png'
 function TechMarquee() {
     return (
         <div className="marquee-wrapper">
@@ -39,6 +40,10 @@ function TechMarquee() {
                 </div>
                 <div className="image-wrapper">
                     <img src={postgresql} alt="" />
+
+                </div>
+                <div className="image-wrapper">
+                    <img src={next} alt="" />
 
                 </div>
 

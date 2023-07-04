@@ -14,8 +14,9 @@
 
 .background-img {
   display: block;
-  width: 100%;
+  width: 100vw;
   position: fixed;
+  left: 0;
 }
 
 .stroke {
@@ -123,8 +124,8 @@ nav {
   justify-content: space-around;
   z-index: 1000;
   position: fixed;
-  width: 100%;
-  max-width: 1400px;
+  left: 0;
+  width: 100vw;
   background-color: transparent;
   backdrop-filter: blur(10px);
 }

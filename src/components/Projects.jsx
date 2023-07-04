@@ -109,7 +109,9 @@ function projects() {
                     Built with React and improved using Three.js
                 </p> : project === 'todo' ? <p>Solution of the Todo app challenge from Frontend Mentor.
                     Built with React.
-                </p> : project === 'audn' ? <p>Final project of the Full Stack Web Developer bootcamp. Built with React and Node.</p> : null}</div>
+                </p> : project === 'audn' ? <p>Final project of the Full Stack Web Developer bootcamp. Built with React and Node.</p> :
+                    project === 'appointify' ? <p>Appointify is designed to help you manage and organize your appointments and contacts. Built with Next.js. </p> :
+                        null}</div>
         </div >
 
     )

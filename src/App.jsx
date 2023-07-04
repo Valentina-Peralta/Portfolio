@@ -198,27 +198,6 @@ function App() {
               radius={1}
             />
           </Canvas>
-          {/* <div className="sphere1">
-            <Planet
-              color='#8c97f5'
-              radius='3'
-              lightX='0'
-              lightY='10'
-              lightZ='10'
-              lightIntensity='1'
-              littleSphere
-            />
-          </div>
-          <div className="sphere2">
-            <Planet
-              color='#FFFFFF'
-              radius='2'
-              lightX='-10'
-              lightY='-10'
-              lightZ='0'
-              lightIntensity='0.1' />
-          </div>
- */}
 
 
           <div className="main" >

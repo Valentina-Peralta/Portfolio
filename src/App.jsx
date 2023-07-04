@@ -223,7 +223,7 @@ function App() {
 
           <div className="main" >
             {working ? (<div className="working">Working on it</div>) : null}
-            <video
+            {/* <video
               className="background-video"
               ref={videoRef}
               autoPlay
@@ -237,11 +237,12 @@ function App() {
                 height: '100%',
                 objectFit: 'cover',
                 opacity: .5,
+                display: 'none'
               }}
             >
               <source src={backgroundVideo} type="video/mp4" />
               Tu navegador no soporta el elemento de video.
-            </video>
+            </video> */}
             <img className="background-img" src={backgroundImage} />
             <h1
               style={{

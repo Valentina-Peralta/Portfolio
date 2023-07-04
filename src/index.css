@@ -13,7 +13,9 @@
 }
 
 .background-img {
-  display: none;
+  display: block;
+  width: 100%;
+  position: fixed;
 }
 
 .stroke {

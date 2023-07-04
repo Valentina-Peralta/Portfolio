@@ -62,7 +62,7 @@
     border-radius: 20px;
     gap: 2rem;
     position: relative;
-    top: 30%;
+    top: 35%;
     left: 10%;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .project-wrapper h3 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 400;
     transition: transform 0.3s ease, font-weight 0.3s ease, text-transform 0.3s ease;
     text-shadow: 0px 0px 5px #000000;
@@ -117,6 +117,7 @@
 .icons svg {
     width: 37px;
     cursor: pointer;
+    z-index: 1000;
 }
 
 #active {

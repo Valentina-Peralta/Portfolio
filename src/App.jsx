@@ -1,6 +1,6 @@
 import Nav from "./components/Nav";
 import backgroundVideo from './assets/images/background4.mp4'
-import backgroundImage from './assets/images/mobileBackground.png'
+import backgroundImage from './assets/images/background8.jpg'
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -296,5 +296,5 @@ function App() {
 }
 
 export default App;
-   /*             <p>I firmly believe that knowledge is power and solving problems brings me joy</p>
+/*             <p>I firmly believe that knowledge is power and solving problems brings me joy</p>
 */

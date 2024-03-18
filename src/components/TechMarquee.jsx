@@ -8,12 +8,16 @@ import node from '../assets/images/node.png'
 import express from '../assets/images/express.png'
 import postgresql from '../assets/images/postgresql.png'
 import next from '../assets/images/next.png'
+import docker from '../assets/images/docker.svg'
+import kubernetes from '../assets/images/kubernetes.svg'
+import concourse from '../assets/images/concourse.svg'
+import mongo from '../assets/images/mongo.svg'
 function TechMarquee() {
     return (
         <div className="marquee-wrapper">
             <Marquee
                 pauseOnHover
-                speed={60}
+                speed={120}
             >
                 <div className="image-wrapper">
                     <img src={html} alt="" />
@@ -44,6 +48,22 @@ function TechMarquee() {
                 </div>
                 <div className="image-wrapper">
                     <img src={next} alt="" />
+
+                </div>
+                <div className="image-wrapper">
+                    <img src={docker} alt="" />
+
+                </div>
+                <div className="image-wrapper">
+                    <img src={kubernetes} alt="" />
+
+                </div>
+                <div className="image-wrapper">
+                    <img src={concourse} alt="" />
+
+                </div>
+                <div className="image-wrapper">
+                    <img src={mongo} alt="" />
 
                 </div>
 

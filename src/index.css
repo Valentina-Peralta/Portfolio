@@ -13,10 +13,10 @@
 }
 
 .background-img {
-  display: block;
   width: 100vw;
   position: fixed;
   left: 0;
+  filter: brightness(40%);
 }
 
 .stroke {

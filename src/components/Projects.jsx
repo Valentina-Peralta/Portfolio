@@ -9,7 +9,7 @@ import olivia from '../assets/images/olivia.png'
 import olivia2 from '../assets/images/olivia2.png'
 function projects() {
 
-    const [project, setproject] = useState('olivia')
+    const [project, setproject] = useState('audn')
     const [hover, setHover] = useState(false)
     useEffect(() => console.log(project, hover), [project, hover])
     const [demo, setDemo] = useState(false)
@@ -40,7 +40,7 @@ function projects() {
 
                 }}
             >
-                <h3
+                {/*   <h3
                     id={project === 'olivia' ? 'active' : null}
                     onMouseEnter={() => {
                         setproject('olivia')
@@ -48,7 +48,7 @@ function projects() {
 
                     }}
 
-                >Olivia</h3>
+                >Olivia</h3> */}
                 <h3
                     id={project === 'space' ? 'active' : null}
                     onMouseEnter={() => {
